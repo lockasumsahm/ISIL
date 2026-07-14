@@ -1,0 +1,50 @@
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+import json
+from pathlib import Path
+
+import pytest
+
+from app.core.fusion import FusionEngine
+from app.intelligence.context import ContextAnalysis
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+@pytest.fixture
+def fusion():
+    return FusionEngine(ROOT / "config/fusion_weights.json", ROOT / "config/thresholds.json")
+
+
+def test_fusion_aggregation(fusion):
+    scores = {"toxicity": 70, "scam": 90, "threat": 10}
+    ctx = ContextAnalysis(sarcasm_likelihood=0.0)
+    result = fusion.aggregate_signals(scores, "GLOBAL", ctx, memory_modifier=5)
+    assert 0 <= result.final_score <= 100
+    assert result.breakdown["scam"] == 90
+
+
+def test_sarcasm_reduces_score(fusion):
+    scores = {"toxicity": 60, "scam": 10}
+    ctx = ContextAnalysis(sarcasm_likelihood=0.9, toxicity_modifier=-20)
+    with_ctx = fusion.aggregate_signals(scores, "GLOBAL", ctx)
+    without = fusion.aggregate_signals(scores, "GLOBAL", None)
+    assert with_ctx.final_score < without.final_score
+
+
+def test_decision_thresholds(fusion):
+    assert fusion.decide(90, "GLOBAL")[0] == "block"
+    assert fusion.decide(75, "GLOBAL")[0] == "review"
+    assert fusion.decide(55, "GLOBAL")[0] == "warn"
+    assert fusion.decide(10, "GLOBAL")[0] == "allow"
+
+
+def test_eu_stricter_block(fusion):
+    decision_global, _ = fusion.decide(82, "GLOBAL")
+    decision_eu, _ = fusion.decide(82, "EU")
+    assert decision_eu in ("block", "review")
+    assert decision_global in ("block", "review", "warn")

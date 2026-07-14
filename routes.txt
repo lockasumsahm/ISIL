@@ -1,0 +1,4 @@
+app/main.pyTAB:@app.get("/")
+app/api/routes/health.py:@router.get("/health", response_model=HealthResponse)
+app/api/routes/dashboard.py:@router.get("/dashboard", response_class=HTMLResponse)
+app/main.py:@app.get("/")

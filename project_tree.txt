@@ -1,0 +1,63 @@
+.
+├── .env
+├── .gitignore
+├── Dockerfile
+├── README.md
+├── app
+│   ├── __init__.py
+│   ├── adapters
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── huggingface.py
+│   │   ├── mock.py
+│   │   ├── openai_adapter.py
+│   │   ├── perspective.py
+│   │   └── plugins.py
+│   ├── api
+│   │   ├── middleware
+│   │   ├── routes
+│   │   │   ├── __init__.py
+│   │   │   ├── dashboard.py
+│   │   │   └── health.py
+│   │   ├── schemas
+│   │   │   └── response.py
+│   │   └── static
+│   ├── company
+│   ├── config.py
+│   ├── core
+│   │   ├── fusion.py
+│   │   └── pipeline.py
+│   ├── db
+│   │   ├── models.py
+│   │   └── session.py
+│   ├── engines
+│   ├── explainability
+│   ├── intelligence
+│   ├── main.py
+│   ├── main.pyTAB
+│   ├── memory
+│   ├── models
+│   ├── policies
+│   ├── policy
+│   ├── security_posture
+│   ├── services
+│   │   └── feedback.py
+│   ├── signals
+│   └── storage
+│       ├── __init__.py
+│       └── audit.py
+├── config
+│   ├── security_frameworks
+│   └── tenant_overrides
+│       └── .gitkeep
+├── isil.db
+├── project_tree.txt
+├── requirements.txt
+├── scripts
+│   ├── demo_client.py
+│   └── seed_api_keys.py
+└── tests
+    ├── conftest.py
+    └── test_fusion.py
+
+27 directories, 34 files
