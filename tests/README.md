@@ -1,17 +1,21 @@
 # ISIL Test Architecture
 
-Tests are organized by verification responsibility.
+Tests are organized by engineering responsibility.
 
-- unit/ — isolated deterministic behavior
-- integration/ — component interactions
-- api/ — HTTP/API contracts
-- security/ — security controls and abuse cases
-- database/ — persistence and transaction behavior
-- intelligence/ — intelligence/pipeline behavior
-- adapters/ — provider and external adapter contracts
-- end_to_end/ — complete user-to-system flows
-- contracts/ — machine-verifiable architectural/API contracts
-- fixtures/ — reusable deterministic test data
-- performance/ — benchmark and latency tests
-- load/ — concurrency and throughput validation
-- chaos/ — resilience and failure injection
+- `unit/` — isolated module behavior.
+- `integration/` — component boundaries and persistence.
+- `api/` — request/response/API contracts.
+- `security/` — authentication, authorization, isolation, abuse resistance.
+- `database/` — schema, transaction, migration, and consistency behavior.
+- `intelligence/` — inference, orchestration, context, memory, and model behavior.
+- `adapters/` — provider and external integration contracts.
+- `e2e/` — full user/system workflows.
+- `contracts/` — executable architectural contracts.
+- `performance/` — benchmark and latency controls.
+- `load/` — concurrency and sustained-load behavior.
+- `chaos/` — failure and recovery behavior.
+- `fixtures/` — deterministic test data.
+
+Do not add empty tests merely to increase test counts.
+
+Every critical production behavior should eventually have an executable contract.

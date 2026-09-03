@@ -1,62 +1,35 @@
 # ISIL Production Readiness
 
-## Repository
-- [ ] Protected main branch
-- [ ] Feature branch workflow
-- [ ] Required CI checks
-- [ ] Code ownership defined
-- [ ] Clean generated-artifact boundary
+## P0
 
-## Python
+- [ ] Clean branch baseline
 - [ ] pyproject.toml
 - [ ] uv.lock
-- [ ] Reproducible environment
-- [ ] Linting
-- [ ] Formatting
-- [ ] Type checking
-- [ ] Dependency audit
+- [ ] CI
+- [ ] tests
+- [ ] security scanning
+- [ ] dependency scanning
+- [ ] Graphify relationship validation
+- [ ] centralized authorization
+- [ ] tenant isolation
+- [ ] audit trail
+- [ ] API contracts
 
-## Security
-- [ ] CodeQL
-- [ ] Secret scanning
-- [ ] Dependency review
+## P1
+
+- [ ] metrics
+- [ ] tracing
+- [ ] structured logging
+- [ ] backup
+- [ ] restore
+- [ ] migration rollback
+- [ ] staging
+- [ ] production deployment
+- [ ] release IDs
+- [ ] rollback
 - [ ] SBOM
-- [ ] Build provenance
-- [ ] Prompt-injection controls
-- [ ] Tool authorization
-- [ ] Tenant isolation
-- [ ] Audit logging
+- [ ] build provenance
 
-## Architecture
-- [ ] Identity
-- [ ] Authentication
-- [ ] Authorization
-- [ ] Organization
-- [ ] Workspace
-- [ ] Project
-- [ ] Intelligence
-- [ ] Memory
-- [ ] Knowledge graph
-- [ ] Workflow engine
-- [ ] Data layer
-- [ ] Observability
-- [ ] Security
-- [ ] Developer platform
+## Exit Rule
 
-## Operations
-- [ ] Development
-- [ ] Staging
-- [ ] Production
-- [ ] Release process
-- [ ] Rollback
-- [ ] Health checks
-- [ ] Backup
-- [ ] Restore
-- [ ] Disaster recovery
-- [ ] RPO defined
-- [ ] RTO defined
-
-## Evidence
-- [ ] Every critical requirement maps to implementation
-- [ ] Every critical implementation has tests
-- [ ] Every security claim has evidence
+A checkbox may only become `[x]` when executable or externally verifiable evidence exists.
