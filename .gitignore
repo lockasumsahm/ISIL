@@ -10,3 +10,64 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+# ISIL local / generated state
+.claude/
+.opencode/
+.hypothesis/
+graphify-out/
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+coverage.xml
+htmlcov/
+.coverage
+artifacts/
+backups/
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ============================================================
+# ISIL LOCAL / GENERATED STATE
+# ============================================================
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.hypothesis/
+.DS_Store
+
+# Code intelligence / security generated artifacts
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+graphify-out/
+
+# Local AI-agent/runtime state
+.opencode/
+.claude/local/
+.claude/state/
+
+# Coverage / benchmark output
+.coverage
+coverage.xml
+htmlcov/
+*.coverage
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.pyc
+node_modules/
