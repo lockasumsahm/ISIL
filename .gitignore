@@ -10,3 +10,22 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+# ISIL local / generated state
+.claude/
+.opencode/
+.hypothesis/
+graphify-out/
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+coverage.xml
+htmlcov/
+.coverage
+artifacts/
+backups/
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
