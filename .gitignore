@@ -10,3 +10,38 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+
+# Local/generated intelligence state
+graphify-out/
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local tooling
+.opencode/
+.DS_Store
+
+# Local secrets/config
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
