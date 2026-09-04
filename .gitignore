@@ -10,3 +10,72 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+
+# ============================================================
+# ISIL LOCAL / GENERATED STATE
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+
+# macOS
+.DS_Store
+
+# Local AI / assistant state
+.opencode/
+.claude/local/
+.claude/cache/
+.claude/tmp/
+
+# Graphify generated/local state
+graphify-out/
+.graphify-dbs/
+.graphify/
+graphify-labs-report*.md
+graphify-isil-report*.md
+
+# CodeQL generated/local databases and SARIF
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+codeql-dbs/
+
+# Security reports / local audit artifacts
+security-reports/
+audit-reports/
+*.sarif
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Coverage / performance
+coverage/
+htmlcov/
+.prof
+.pyperf/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local logs
+*.log
+logs/
+
+# Claude / tool backups created locally
+*.bak
+*.tmp

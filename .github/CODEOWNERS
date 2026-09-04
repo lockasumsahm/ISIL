@@ -1,0 +1,7 @@
+# ISIL engineering ownership
+* @lockasumsahm
+
+# Security-sensitive areas
+/app/security/ @lockasumsahm
+/.github/ @lockasumsahm
+/docs/security/ @lockasumsahm
