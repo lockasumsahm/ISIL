@@ -1,12 +1,59 @@
-.env
-*.db
+# Python
 __pycache__/
 *.py[cod]
+*.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
 .venv/
 venv/
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# Build / packaging
+build/
 dist/
 *.egg-info/
-.DS_Store
-.idea/
+.wheels/
+
+# Local AI / generated state
+.codeql-dbs/
+.codeql/
+codeql-results/
+codeql-results-clean/
+graphify-out/
+.opencode/
+*.sarif
+*.patch
+*.bak
+*.tmp
+
+# Local caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / editor
 .vscode/
+.idea/
+
+# Runtime / logs
+*.log
+logs/
+
+# Secrets
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets/
