@@ -45,3 +45,49 @@ dist/
 build/
 *.egg-info/
 
+
+# ============================================================
+# ISIL LOCAL / GENERATED STATE
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# CodeQL
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+
+# Graphify
+graphify-out/
+
+# Local tooling
+.opencode/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Test / benchmark output
+coverage/
+reports/
+artifacts/
+
+# Local secrets
+.env
+.env.*
+!.env.example

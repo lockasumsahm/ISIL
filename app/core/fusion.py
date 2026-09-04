@@ -3,7 +3,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from app.intelligence.context import ContextAnalysis
-from app.intelligence.jurisdiction import PolicyPack
 
 
 @dataclass
