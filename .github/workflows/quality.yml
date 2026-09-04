@@ -11,23 +11,28 @@ permissions:
 
 jobs:
   quality:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "latest"
 
       - name: Set up Python
-        run: uv python install 3.13
+        run: uv python install 3.14
 
-      - name: Sync locked environment
+      - name: Sync environment
         run: uv sync --locked
 
-      - name: Run tests
+      - name: Compile
+        run: uv run python -m compileall app
+
+      - name: Tests
         run: uv run pytest -q
 
-      - name: Check dependency lock
-        run: uv lock --check
+      - name: Git diff check
+        run: git diff --check

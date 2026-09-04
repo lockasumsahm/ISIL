@@ -38,7 +38,7 @@ Open:
 ```bash
 curl -X POST http://127.0.0.1:8000/v1/safety/check \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: isil_dev_key_change_in_production" \
+  -H "X-API-Key: <DEMO_API_KEY>" \
   -d '{
     "text": "URGENT send money wire transfer verify your account",
     "jurisdiction": "EU",
@@ -57,13 +57,13 @@ python scripts/demo_client.py "your message here"
 | Key | Purpose |
 |-----|---------|
 | `ISIL_MASTER_API_KEY` (from `.env`) | Full admin access |
-| Dev key from seed script | `isil_dev_key_change_in_production` |
+| Dev key from seed script | `<DEMO_API_KEY>` |
 
 Create tenant keys (master only):
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/v1/admin/api-keys?name=acme_corp" \
-  -H "X-API-Key: dev-master-key-change-in-production"
+  -H "X-API-Key: <MASTER_API_KEY>"
 ```
 
 ## External providers (optional)

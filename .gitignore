@@ -91,3 +91,76 @@ artifacts/
 .env
 .env.*
 !.env.example
+# ISIL local / generated state
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+graphify-out/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.DS_Store
+
+# Local environments
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Local IDE / agent state
+.opencode/
+.idea/
+.vscode/
+
+security/reports/gitleaks-redacted.json
+
+# ============================================================
+# ISIL LOCAL / GENERATED STATE
+# ============================================================
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.DS_Store
+
+.codeql-dbs/
+codeql-results/
+codeql-results-clean/
+
+graphify-out/
+.graphify-out/
+
+.opencode/
+.opencode/
+
+.local-safety/
+
+.env
+.env.*
+!.env.example
+
+coverage/
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+
+# Local databases / runtime state
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / editor state
+.vscode/
+.idea/
